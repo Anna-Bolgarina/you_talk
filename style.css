@@ -191,12 +191,18 @@ body {
 
   display: flex;
   justify-content: start;
-  gap: 8px;
 
   font-size: 12px;
   line-height: 18px;
 
   opacity: 70%;
+}
+.main__link li + li::before {
+  content: "";
+  background-image: url(icon/Arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 8px;
 }
 .main__title {
   margin-top: 30px;
@@ -1128,15 +1134,14 @@ body {
   .container__whole-article {
     flex-direction: column;
   }
-  .main__link {
-    flex-wrap: nowrap;
-    align-items: start;
-  }
   .main__link-mobile {
     max-width: 223px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .main__link li + li::before {
+    background-position: 0 25%;
   }
   .article__title {
     margin-top: 22px;
@@ -1299,9 +1304,8 @@ body {
   .container__whole-article {
     flex-direction: column;
   }
-  .main__link {
-    flex-wrap: nowrap;
-    align-items: start;
+  .main__link li + li::before {
+    background-position: 0 25%;
   }
   .main__link-mobile {
     max-width: 150px;
